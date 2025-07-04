@@ -2,38 +2,55 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Actualités - En Construction</title>
+    <title>Glory Web Radio - Actualités</title>
     <style>
         body {
-            display: flex;
-            height: 100vh;
             margin: 0;
-            justify-content: center;
-            align-items: center;
             background: #f5f5f5;
             font-family: Arial, sans-serif;
         }
-        .message {
-            background: #fff;
-            padding: 40px 60px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        header {
+            background: #d32f2f;
+            padding: 32px 0;
             text-align: center;
         }
-        .message h1 {
-            color: #e67e22;
-            margin-bottom: 16px;
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
         }
-        .message p {
-            color: #333;
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 32px;
+        }
+        .rubriques {
+            list-style: none;
+            padding: 0;
+        }
+        .rubriques li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
             font-size: 1.2em;
+            color: #d32f2f;
+        }
+        .rubriques li:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        <h1>Actualités</h1>
-        <p>Cette page est en construction.</p>
-    </div>
-</body>
-</html>
+    <header>
+        <h1>Glory Web Radio</h1>
+    </header>
+    <div class="container">
+        <h2>Nouvelles Rubriques</h2>
+        <ul class="rubriques">
+            <li>Actualités Internationales</li>
+            <li>Culture et Musique</li>
+            <li>Interviews Exclusives</li>
+            <li>Émissions
