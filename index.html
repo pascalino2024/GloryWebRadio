@@ -1,56 +1,92 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Glory Web Radio - Actualités</title>
-    <style>
-        body {
-            margin: 0;
-            background: #f5f5f5;
-            font-family: Arial, sans-serif;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Radio </title>
+     <style>
         header {
             background: #d32f2f;
             padding: 32px 0;
-            text-align: center;
         }
-        header h1 {
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .header-content h1 {
             color: #fff;
             margin: 0;
             font-size: 2.5em;
             letter-spacing: 2px;
+            flex: 1;
+            text-align: left;
         }
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
+        .circle-btn {
+            margin-left: 24px;
+            width: 56px;
+            height: 56px;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            padding: 32px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.2s;
+            animation: pulse 1.2s infinite;
         }
-        .rubriques {
-            list-style: none;
-            padding: 0;
+        .circle-btn:active {
+            box-shadow: 0 0 0 8px rgba(211,47,47,0.15);
         }
-        .rubriques li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 1.2em;
-            color: #d32f2f;
+        .circle-btn-icon {
+            width: 36px;
+            height: 36px;
+            display: block;
         }
-        .rubriques li:last-child {
-            border-bottom: none;
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(211,47,47,0.3);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(211,47,47,0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(211,47,47,0);
+            }
+        }
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .header-content h1 {
+                text-align: center;
+            }
+            .circle-btn {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Glory Web Radio</h1>
+     <header>
+        <div class="header-content">
+            <h1>Glory Web Radio</h1>
+            <button class="circle-btn" title="Écouter la radio">
+                <svg class="circle-btn-icon" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="22" stroke="#d32f2f" stroke-width="2" fill="none"/>
+                    <polygon points="20,16 34,24 20,32" fill="#d32f2f"/>
+                   
+                </svg>
+            </button>
+             <h2 style="color:#fff"> <b> </b>Live Radio </h2>
+        </div>
     </header>
-    <div class="container">
-        <h2>Nouvelles Rubriques</h2>
-        <ul class="rubriques">
-            <li>Actualités Internationales</li>
-            <li>Culture et Musique</li>
-            <li>Interviews Exclusives</li>
-            <li>Émissions
+</body>
+</html>
